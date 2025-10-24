@@ -1,5 +1,5 @@
-function App() {
-	return <>Hello world</>;
-}
+import { MeteoPage } from "@/pages/MeteoPage";
 
-export default App;
+export default function App() {
+  return <MeteoPage />;
+}
