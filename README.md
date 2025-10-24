@@ -1,54 +1,62 @@
-Redux toolkit Redux RTK Tailwind Recharts
+# 🌤️ Weather Dashboard
 
-npm install recharts @reduxjs/toolkit react-redux tailwindcss @tailwindcss/vite
+Простой и элегантный дашборд для отображения прогноза погоды в трёх городах: **Казань**, **Амстердам** и **Нью-Йорк**.  
+Позволяет переключаться между диапазонами: **24 часа**, **3 дня** и **7 дней**.  
+Использует открытый API [Open-Meteo](https://open-meteo.com/) для получения данных.
 
-# React + TypeScript + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🛠️ Технологический стек
 
-Currently, two official plugins are available:
+### Основной стек
+- **React 18** — UI-библиотека
+- **TypeScript** — типизация и надёжность
+- **Vite** — быстрая сборка и dev-сервер
+- **Redux Toolkit** — управление состоянием
+- **RTK Query** — работа с API (встроено в Redux Toolkit)
+- **Tailwind CSS v4** — стилизация
+- **Lucide React** — иконки
+- **Recharts** — визуализация данных
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Инструменты разработки
+- **ESLint** + **TypeScript ESLint** — линтинг кода
+- **Prettier** — форматирование
+- **@vitejs/plugin-react** — поддержка React в Vite
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Запуск проекта
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-	languageOptions: {
-		// other options...
-		parserOptions: {
-			project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-			tsconfigRootDir: import.meta.dirname,
-		},
-	},
-});
+### 1. Клонируйте репозиторий
+```bash
+git clone https://github.com/your-username/weather-dashboard.git
+cd weather-dashboard
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 Установка и запуск
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+### 1. Установите зависимости
 
-export default tseslint.config({
-	// Set the react version
-	settings: { react: { version: "18.3" } },
-	plugins: {
-		// Add the react plugin
-		react,
-	},
-	rules: {
-		// other rules...
-		// Enable its recommended rules
-		...react.configs.recommended.rules,
-		...react.configs["jsx-runtime"].rules,
-	},
-});
+```bash
+npm install
+```
+
+### 1. Установите зависимости
+
+```bash
+npm install
+```
+
+### 2. Запустите dev-сервер
+
+```bash
+npm run dev
+```
+
+http://localhost:5173
+
+### 3. Сборка для production
+
+```bash
+npm run build
 ```
