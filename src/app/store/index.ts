@@ -1,7 +1,11 @@
+import { meteoApi } from "@/entities/meteo/api/meteo";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    [meteoApi.reducerPath]: meteoApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(meteoApi.middleware),
 });
 
 export type RooState = ReturnType<typeof store.getState>;
